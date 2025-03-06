@@ -76,8 +76,8 @@ struct Open_IsiJumlahBoard: View {
                     .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2 + 60)
 
                 
-                TextWithStyle(text: "Connected to CLOSE TABLE", fontSize: 15, fontWeight: .semibold, color: .white)
-                    .position(x: UIScreen.main.bounds.width / 2, y: 700)
+//                TextWithStyle(text: "Connected to CLOSE TABLE", fontSize: 15, fontWeight: .semibold, color: .white)
+//                    .position(x: UIScreen.main.bounds.width / 2, y: 700)
                 
                 
                 
@@ -110,7 +110,7 @@ struct Open_IsiJumlahBoard: View {
                 }
                 .disabled(isNextButtonDisabled)
                 .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                .position(x: UIScreen.main.bounds.width / 2, y: 700)
+                .position(x: UIScreen.main.bounds.width / 2, y: 600)
             }
             .frame(width: 390, height: 844)
             .background(Color(red: 0.96, green: 0.95, blue: 0.94))

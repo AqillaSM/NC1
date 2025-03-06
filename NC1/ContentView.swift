@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var conn4VM: Conn4VM
     @State private var Tables: String = ""
     @State private var isNavigationActive = false
     @State private var showAlert = false
@@ -42,7 +41,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     )
                     .onTapGesture {
-                        conn4VM.advertise()
+                       
                         Tables = "OPEN"
                         isNavigationActive = true
                     }
@@ -68,8 +67,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     )
                     .onTapGesture {
-                        conn4VM.invite()
-
+                        
                         Tables = "CLOSE"
                         isNavigationActive = true
                     }
@@ -94,5 +92,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(conn4VM: Conn4VM())
+    ContentView()
 }

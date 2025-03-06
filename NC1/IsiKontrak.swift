@@ -198,7 +198,7 @@ struct IsiKontrak: View {
                         {
                             if self.data[index][1] == "VT"
                             {
-                                if KontrakDisplay.contains("-")
+                                if self.data[index][0].contains("-")
                                 {
                                     self.data[index][3] = self.data[index][2]
                                 }
@@ -208,7 +208,7 @@ struct IsiKontrak: View {
                                 }
                             }
                             else {
-                                if KontrakDisplay.contains("-")
+                                if self.data[index][0].contains("-")
                                 {
                                     self.data[index][3] = "-" + self.data[index][2]
                                 }
@@ -700,11 +700,11 @@ struct IsiKontrak: View {
                 .onTapGesture{
                     if Player == "NS"
                     {
-                        Player = "VT"
+                        Player = "HT"
                     }
                     else
                     {
-                        Player = "HT"
+                        Player = "VT"
                     }
                     
                     if KontrakDisplay.contains("+ 0")
@@ -722,7 +722,7 @@ struct IsiKontrak: View {
                     self.data[NomorBoard][0] = KontrakDisplay
                     self.data[NomorBoard][1] = Player
                     self.data[NomorBoard][2] = String(hitungscore)
-                    if Player == "VT"
+                    if Player == "HT"
                     {
                         if KontrakDisplay.contains("-")
                         {
@@ -1055,19 +1055,26 @@ struct IsiKontrak: View {
         }
         else if (Operator == "+" && Angka != "0")
         {
-            if WarnaKontrak == "♠️" || WarnaKontrak == "♥️"
+            if WarnaKontrak == "spade" || WarnaKontrak == "heart"
             {
                 if AngkaKontrak == "1" || AngkaKontrak == "2"  || AngkaKontrak == "3"
                 {
                     if isDoubleSelected == true
                     {
-                        hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        if isVulSelected == true
+                        {
+                            hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                        }
+                        else
+                        {
+                            hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        }
                     }
                     else if isRedoubleSelected == true
                     {
                         if isVulSelected == true
                         {
-                            hitungscore = 720 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            hitungscore = 720 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
                         }
                         else
                         {
@@ -1180,22 +1187,39 @@ struct IsiKontrak: View {
                 }
                 
             }
-            else if warnaKontrak == "♦️" || warnaKontrak == "♣️"
+            else if warnaKontrak == "diamond" || warnaKontrak == "club"
             {
                 if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3" || angkaKontrak == "4"
                 {
-                    if isDoubleSelected == true
-                    {
-                        hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                    if isVulSelected == true{
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                        }
+                        else
+                        {
+                            hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                        }
                     }
-                    else if isRedoubleSelected == true
-                    {
-                        hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                    else{
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                        }
+                        else
+                        {
+                            hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                        }
                     }
-                    else
-                    {
-                        hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
-                    }
+                    
                 }
                 else if angkaKontrak == "5"
                 {
@@ -1303,13 +1327,21 @@ struct IsiKontrak: View {
                 {
                     if isDoubleSelected == true
                     {
-                        hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        if isVulSelected == true
+                        {
+                            hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                        }
+                        else
+                        {
+                            hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        }
+                        
                     }
                     else if isRedoubleSelected == true
                     {
                         if isVulSelected == true
                         {
-                            hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
                         }
                         else
                         {
@@ -1425,7 +1457,7 @@ struct IsiKontrak: View {
         }
         else if Operator == "=" || Angka == "0"
         {
-            if warnaKontrak == "♠️" || warnaKontrak == "♥️"
+            if warnaKontrak == "spade" || warnaKontrak == "heart"
             {
                 if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3"
                 {
@@ -1550,7 +1582,7 @@ struct IsiKontrak: View {
                 }
                 
             }
-            else if warnaKontrak == "♦️" || warnaKontrak == "♣️"
+            else if warnaKontrak == "diamond" || warnaKontrak == "club"
             {
                 if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3" || angkaKontrak == "4"
                 {

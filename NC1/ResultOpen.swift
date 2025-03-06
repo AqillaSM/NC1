@@ -490,7 +490,7 @@ struct ResultOpen: View {
             .background(Color(red: 0.96, green: 0.95, blue: 0.94))
             .background(
                 NavigationLink(
-                    destination: ContentView(conn4VM: Conn4VM()   ).navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
+                    destination: ContentView().navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
                     isActive: $isFinishButtonPressed,
                     label: {
                         EmptyView()

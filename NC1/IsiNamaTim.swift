@@ -90,7 +90,7 @@ struct IsiNamaTim: View {
                         ])
                     }
                 }
-                .position(x: UIScreen.main.bounds.width / 2, y: 700)
+                .position(x: UIScreen.main.bounds.width / 2, y: 600)
                 
                 TextWithStyle(text: "NAMA HOME TEAM", fontSize: 17, fontWeight: .regular, color: Color(red: 0.38, green: 0.28, blue: 0.22))
                     .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2 - 100)

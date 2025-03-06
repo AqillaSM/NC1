@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Result: View {
     @State private var isFinishButtonPressed = false
+    @State private var showAlert = false
     
     @Binding var jumlahBoard: String
     @Binding var awalInput: String
@@ -46,15 +47,15 @@ struct Result: View {
                         .foregroundColor(.black)
                     
                     HStack(spacing: 20) {
-                        Text("HOME TEAM    : \n\nVISITOR TEAM : \n\nBOARDS           :\n")
+                        Text("HOME TEAM    : \(homeTeamInput)\n\nVISITOR TEAM : \(visitorTeamInput)\n\nBOARDS           : \(jumlahBoard)\n")
                             .font(Font.custom("SF Pro Text", size: 15))
                             .foregroundColor(Color(red: 0.06, green: 0.05, blue: 0.04))
                             .position(x: 90, y: 60)
                         
-                        Text("\(homeTeamInput)\n\n\(visitorTeamInput)\n\n\(jumlahBoard)")
-                            .font(Font.custom("SF Pro Text", size: 15))
-                            .foregroundColor(Color(red: 0.06, green: 0.05, blue: 0.04))
-                            .position(x: 10, y: 50)
+//                        Text("\(homeTeamInput)\n\n\(visitorTeamInput)\n\n\(jumlahBoard)")
+//                            .font(Font.custom("SF Pro Text", size: 15))
+//                            .foregroundColor(Color(red: 0.06, green: 0.05, blue: 0.04))
+//                            .position(x: -50, y: 50)
                     }
                     Spacer()
                     Spacer()
@@ -415,22 +416,28 @@ struct Result: View {
                     Spacer()
                     
                     Button(action: {
-                        isFinishButtonPressed = true
-                    }) {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color(red: 0.38, green: 0.28, blue: 0.22))
-                            .frame(width: 307, height: 58)
-                            .overlay(
-                                Text("FINISH")
-                                    .font(
-                                        Font.custom("SF Pro Text", size: 15)
-                                            .weight(.semibold)
-                                    )
-                                    .foregroundColor(.white)
-                            )
-                            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                    }
-                    .padding()
+                                    showAlert = true
+                                }) {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(Color(red: 0.38, green: 0.28, blue: 0.22))
+                                        .frame(width: 307, height: 58)
+                                        .overlay(
+                                            Text("FINISH")
+                                                .font(
+                                                    Font.custom("SF Pro Text", size: 15)
+                                                        .weight(.semibold)
+                                                )
+                                                .foregroundColor(.white)
+                                        )
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                                }
+                                .padding()
+                                .alert("Are you sure you want to finish the table?", isPresented: $showAlert) {
+                                    Button("Cancel", role: .cancel) { }
+                                    Button("Yes", role: .destructive) {
+                                        isFinishButtonPressed = true
+                                    }
+                                }
                     
                     
                     Spacer()
@@ -444,7 +451,7 @@ struct Result: View {
             .background(Color(red: 0.96, green: 0.95, blue: 0.94))
             .background(
                 NavigationLink(
-                    destination: ContentView(conn4VM: Conn4VM()   ).navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
+                    destination: ContentView().navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
                     isActive: $isFinishButtonPressed,
                     label: {
                         EmptyView()

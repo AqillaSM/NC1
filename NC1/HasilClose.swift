@@ -11,6 +11,7 @@ struct HasilClose: View {
     @State private var isActionSheetPresented = false
     //    @State private var jumlahBoard: String = "8"
     //    @State private var awalInput: String = "1"
+    @State private var showActionSheet = false
     @State private var isFinishButtonPressed = false
     @Binding var jumlahBoard: String
     @Binding var awalInput: String
@@ -95,9 +96,16 @@ struct HasilClose: View {
                                 )
                                 .foregroundColor(.white)
                         )
-                        .onTapGesture{
-                            isFinishButtonPressed = true
+                        .onTapGesture {
+                            showActionSheet = true // Tampilkan Action Sheet saat tombol ditekan
                         }
+                        .confirmationDialog("Are you sure you want to end the table?", isPresented: $showActionSheet, titleVisibility: .visible) {
+                            Button("Yes", role: .destructive) {
+                                isFinishButtonPressed = true
+                            }
+                            Button("Cancel", role: .cancel) { }
+                        }
+
                     
                     
                     Spacer()
@@ -108,7 +116,7 @@ struct HasilClose: View {
             .background(Color(red: 0.96, green: 0.95, blue: 0.94))
             .background(
                 NavigationLink(
-                    destination: ContentView(conn4VM: Conn4VM()).navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
+                    destination: ContentView().navigationBarBackButtonHidden(true), // Ganti dengan halaman tujuan yang tepat
                     isActive: $isFinishButtonPressed,
                     label: {
                         EmptyView()

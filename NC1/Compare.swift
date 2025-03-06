@@ -182,20 +182,20 @@ struct Compare: View {
                     for index in awalInputInt...(tinggiBoard - 2) {
                         let scoreopen = Int(data[index][3]) ?? 0
                         let scoreclose = Int(data[index][4]) ?? 0
-                        
-                        if scoreopen == 0
-                        {
-                            self.data[index][5] = "0"
-                            
-                        }
-                        else if scoreclose == 0
-                        {
-                            self.data[index][5] = "0"
-                        }
-                        else
-                        {
-                            self.data[index][5] = String(scoreopen - scoreclose)
-                        }
+                        self.data[index][5] = String(scoreopen - scoreclose)
+//                        if scoreopen == 0
+//                        {
+//                            self.data[index][5] = String(scoreopen - scoreclose)
+//                            
+//                        }
+//                        else if scoreclose == 0
+//                        {
+//                            self.data[index][5] = String(scoreopen - scoreclose)
+//                        }
+//                        else
+//                        {
+//                            self.data[index][5] = String(scoreopen - scoreclose)
+//                        }
                     }
                     
                     for indexx in awalInputInt...(tinggiBoard - 2) {
@@ -207,9 +207,9 @@ struct Compare: View {
                             self.data[indexx][7] = "0"
                             
                         }
-                        else if scoreselisih < 0 // (punyaHT)
+                        else if scoreselisih > 0 // (punyaHT)
                         {
-                            scoreselisih = scoreselisih * -1
+                            
                             if scoreselisih < 20
                             {
                                 self.data[indexx][7] = "0"
@@ -258,11 +258,11 @@ struct Compare: View {
                             {
                                 self.data[indexx][7] = "11"
                             }
-                            else if scoreselisih >= 600 && scoreselisih <= 690
+                            else if scoreselisih >= 600 && scoreselisih <= 740
                             {
                                 self.data[indexx][7] = "12"
                             }
-                            else if scoreselisih >= 750 && scoreselisih <= 740
+                            else if scoreselisih >= 750 && scoreselisih <= 890
                             {
                                 self.data[indexx][7] = "13"
                             }
@@ -315,6 +315,7 @@ struct Compare: View {
                         }
                         else // punya VT
                         {
+                            scoreselisih = scoreselisih * -1
                             if scoreselisih < 20
                             {
                                 self.data[indexx][6] = "0"
@@ -363,11 +364,11 @@ struct Compare: View {
                             {
                                 self.data[indexx][6] = "11"
                             }
-                            else if scoreselisih >= 600 && scoreselisih <= 690
+                            else if scoreselisih >= 600 && scoreselisih <= 740
                             {
                                 self.data[indexx][6] = "12"
                             }
-                            else if scoreselisih >= 750 && scoreselisih <= 740
+                            else if scoreselisih >= 750 && scoreselisih <= 890
                             {
                                 self.data[indexx][6] = "13"
                             }
@@ -554,9 +555,13 @@ struct Compare: View {
                 )
                 .position(x: 110, y: 470)
                 .onTapGesture {
-                    score = String(Int(score)! * -1)
+                    if score.hasPrefix("-") {
+                        score.removeFirst()
+                    } else {
+                        score = "-" + score
+                    }
                 }
-            
+
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 150, height: 58)
