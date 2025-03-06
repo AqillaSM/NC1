@@ -1054,63 +1054,160 @@ struct Close_IsiKontrak: View {
             {
                 if AngkaKontrak == "1" || AngkaKontrak == "2"  || AngkaKontrak == "3"
                 {
-                    if isDoubleSelected == true
+                    if AngkaKontrak == "1"
                     {
-                        if isVulSelected == true
+                        if isDoubleSelected == true
                         {
-                            hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            if isVulSelected == true
+                            {
+                                hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                            }
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 720 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 520 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
                         }
                         else
                         {
-                            hitungscore = 160 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                            hitungscore = 80 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
                         }
                     }
-                    else if isRedoubleSelected == true
+                    else if AngkaKontrak == "2"
                     {
-                        if isVulSelected == true
+                        if isDoubleSelected == true
                         {
-                            hitungscore = 720 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                            if isVulSelected == true
+                            {
+                                hitungscore = 670 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 470 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 100)
+                            }
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 840 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 640 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
                         }
                         else
                         {
-                            hitungscore = 520 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            hitungscore = 80 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
                         }
                     }
                     else
                     {
-                        hitungscore = 80 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
+                        if isDoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 730 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 530 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 100)
+                            }
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 960 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                        }
+                        else
+                        {
+                            hitungscore = 80 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
+                        }
                     }
                 }
                 else if AngkaKontrak == "4" || AngkaKontrak == "5"
                 {
-                    if isVulSelected == true
+                    if AngkaKontrak == "4"
                     {
-                        if isDoubleSelected == true
+                        if isVulSelected == true
                         {
-                            hitungscore = 790 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
-                        }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 1080 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 400)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 790 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1080 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 620 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            }
                         }
                         else
                         {
-                            hitungscore = 620 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 590 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 880 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 420 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            }
                         }
                     }
                     else
                     {
-                        if isDoubleSelected == true
+                        if isVulSelected == true
                         {
-                            hitungscore = 590 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 100)
-                        }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 880 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 850 + ((Int(Angka)! + Int(AngkaKontrak)! - 5) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1200 + ((Int(Angka)! + Int(AngkaKontrak)! - 5) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 620 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            }
                         }
                         else
                         {
-                            hitungscore = 420 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 650 + ((Int(Angka)! + Int(AngkaKontrak)! - 5) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1000 + ((Int(Angka)! + Int(AngkaKontrak)! - 5) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 420 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 30)
+                            }
                         }
                     }
                 }
@@ -1186,35 +1283,126 @@ struct Close_IsiKontrak: View {
             {
                 if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3" || angkaKontrak == "4"
                 {
-                    if isVulSelected == true{
-                        if isDoubleSelected == true
-                        {
-                            hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                    if angkaKontrak == "1"{
+                        if isVulSelected == true{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
                         }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                        else{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
                         }
-                        else
-                        {
-                            hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                    }
+                    if angkaKontrak == "2"{
+                        if isVulSelected == true{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
+                        }
+                        else{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 560 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
+                        }
+                    }
+                    if angkaKontrak == "3"{
+                        if isVulSelected == true{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 670 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 840 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
+                        }
+                        else{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 470 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 640 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
                         }
                     }
                     else{
-                        if isDoubleSelected == true
-                        {
-                            hitungscore = 140 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                        if isVulSelected == true{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 710 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 920 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
                         }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 230 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
-                        }
-                        else
-                        {
-                            hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                        else{
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 510 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 720 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 70 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 20)
+                            }
                         }
                     }
-                    
                 }
                 else if angkaKontrak == "5"
                 {
@@ -1320,64 +1508,166 @@ struct Close_IsiKontrak: View {
             {
                 if angkaKontrak == "1" || angkaKontrak == "2"
                 {
-                    if isDoubleSelected == true
+                    if angkaKontrak == "1"
                     {
-                        if isVulSelected == true
+                        if isDoubleSelected == true
                         {
-                            hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            if isVulSelected == true
+                            {
+                                hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
+                            }
+                            
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 560 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            }
                         }
                         else
                         {
-                            hitungscore = 180 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 100)
-                        }
-                        
-                    }
-                    else if isRedoubleSelected == true
-                    {
-                        if isVulSelected == true
-                        {
-                            hitungscore = 760 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 400)
-                        }
-                        else
-                        {
-                            hitungscore = 560 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 200)
+                            hitungscore = 90 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
                         }
                     }
                     else
                     {
-                        hitungscore = 90 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
+                        if isDoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 690 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 490 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 100)
+                            }
+                            
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            if isVulSelected == true
+                            {
+                                hitungscore = 880 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 680 + ((Int(Angka)! + Int(AngkaKontrak)! - 2) * 200)
+                            }
+                        }
+                        else
+                        {
+                            hitungscore = 90 + ((Int(Angka)! + Int(AngkaKontrak)! - 1) * 30)
+                        }
                     }
                 }
                 else if angkaKontrak == "4" || angkaKontrak == "5" || angkaKontrak == "3"
                 {
-                    if isVulSelected == true
+                    if angkaKontrak == "3"
                     {
-                        if isDoubleSelected == true
+                        if isVulSelected == true
                         {
-                            hitungscore = 750 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
-                        }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 1000 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 400)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 750 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1000 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 600 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
                         }
                         else
                         {
-                            hitungscore = 600 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 550 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 800 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 400 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
+                        }
+                    }
+                    else if angkaKontrak == "4"
+                    {
+                        if isVulSelected == true
+                        {
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 810 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1120 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 600 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
+                        }
+                        else
+                        {
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 610 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 920 + ((Int(Angka)! + Int(AngkaKontrak)! - 4) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 400 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
                         }
                     }
                     else
                     {
-                        if isDoubleSelected == true
+                        if isVulSelected == true
                         {
-                            hitungscore = 550 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 100)
-                        }
-                        else if isRedoubleSelected == true
-                        {
-                            hitungscore = 800 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 870 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1240 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 400)
+                            }
+                            else
+                            {
+                                hitungscore = 600 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
                         }
                         else
                         {
-                            hitungscore = 400 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            if isDoubleSelected == true
+                            {
+                                hitungscore = 670 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 100)
+                            }
+                            else if isRedoubleSelected == true
+                            {
+                                hitungscore = 1040 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 200)
+                            }
+                            else
+                            {
+                                hitungscore = 400 + ((Int(Angka)! + Int(AngkaKontrak)! - 3) * 30)
+                            }
                         }
                     }
                 }
@@ -1454,58 +1744,156 @@ struct Close_IsiKontrak: View {
         {
             if warnaKontrak == "spade" || warnaKontrak == "heart"
             {
-                if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3"
+                if angkaKontrak == "1"
                 {
                     if isDoubleSelected == true
                     {
-                        hitungscore = 160 + ((Int(angkaKontrak)! - 1) * 100)
+                        if isVulSelected == true
+                        {
+                            hitungscore = 160
+                        }
+                        else
+                        {
+                            hitungscore = 160
+                        }
                     }
                     else if isRedoubleSelected == true
                     {
                         if isVulSelected == true
                         {
-                            hitungscore = 720 + ((Int(angkaKontrak)! - 1) * 200)
+                            hitungscore = 720
                         }
                         else
                         {
-                            hitungscore = 520 + ((Int(angkaKontrak)! - 1) * 200)
+                            hitungscore = 520
                         }
                     }
                     else
                     {
-                        hitungscore = 80 + ((Int(angkaKontrak)! - 1) * 30)
+                        hitungscore = 80
                     }
                 }
-                else if angkaKontrak == "4" || angkaKontrak == "5"
+                else if angkaKontrak == "2"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 670
+                        }
+                        else
+                        {
+                            hitungscore = 470
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 840
+                        }
+                        else
+                        {
+                            hitungscore = 640
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 110
+                    }
+                }
+                else if angkaKontrak == "3"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 730
+                        }
+                        else
+                        {
+                            hitungscore = 530
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 960
+                        }
+                        else
+                        {
+                            hitungscore = 760
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 140
+                    }
+                }
+                else if angkaKontrak == "4"
                 {
                     if isVulSelected == true
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 790 + ((Int(angkaKontrak)! - 4) * 200)
+                            hitungscore = 790
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1080 + ((Int(angkaKontrak)! - 4) * 400)
+                            hitungscore = 1080
                         }
                         else
                         {
-                            hitungscore = 620 + ((Int(angkaKontrak)! - 4) * 30)
+                            hitungscore = 620
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 590 + ((Int(angkaKontrak)! - 4) * 100)
+                            hitungscore = 590
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 880 + ((Int(angkaKontrak)! - 4) * 200)
+                            hitungscore = 880
                         }
                         else
                         {
-                            hitungscore = 420 + ((Int(angkaKontrak)! - 4) * 30)
+                            hitungscore = 420
+                        }
+                    }
+                }
+                else if AngkaKontrak == "5"
+                {
+                    if isVulSelected == true
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 850
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 1200
+                        }
+                        else
+                        {
+                            hitungscore = 650
+                        }
+                    }
+                    else
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 650
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 1000
+                        }
+                        else
+                        {
+                            hitungscore = 450
                         }
                     }
                 }
@@ -1515,30 +1903,30 @@ struct Close_IsiKontrak: View {
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1660 + ((Int(angkaKontrak)! - 6) * 200)
+                            hitungscore = 1660
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 2070 + ((Int(angkaKontrak)! - 6) * 400)
+                            hitungscore = 2070
                         }
                         else
                         {
-                            hitungscore = 1430 + ((Int(angkaKontrak)! - 6) * 30)
+                            hitungscore = 1430
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1210 + ((Int(angkaKontrak)! - 1) * 100)
+                            hitungscore = 1210
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1620 + ((Int(angkaKontrak)! - 1) * 200)
+                            hitungscore = 1620
                         }
                         else
                         {
-                            hitungscore = 980 + ((Int(angkaKontrak)! - 1) * 30)
+                            hitungscore = 980
                         }
                     }
                 }
@@ -1579,19 +1967,120 @@ struct Close_IsiKontrak: View {
             }
             else if warnaKontrak == "diamond" || warnaKontrak == "club"
             {
-                if angkaKontrak == "1" || angkaKontrak == "2"  || angkaKontrak == "3" || angkaKontrak == "4"
+                if angkaKontrak == "1"
                 {
                     if isDoubleSelected == true
                     {
-                        hitungscore = 140 + ((Int(angkaKontrak)! - 1) * 100)
+                        if isVulSelected == true
+                        {
+                            hitungscore = 140
+                        }
+                        else
+                        {
+                            hitungscore = 140
+                        }
                     }
                     else if isRedoubleSelected == true
                     {
-                        hitungscore = 230 + ((Int(angkaKontrak)! - 1) * 200)
+                        if isVulSelected == true
+                        {
+                            hitungscore = 230
+                        }
+                        else
+                        {
+                            hitungscore = 230
+                        }
                     }
                     else
                     {
-                        hitungscore = 70 + ((Int(angkaKontrak)! - 1) * 20)
+                        hitungscore = 70
+                    }
+                }
+                if angkaKontrak == "2"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 180
+                        }
+                        else
+                        {
+                            hitungscore = 180
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 760
+                        }
+                        else
+                        {
+                            hitungscore = 560
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 90
+                    }
+                }
+                if angkaKontrak == "3"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 670
+                        }
+                        else
+                        {
+                            hitungscore = 470
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 840
+                        }
+                        else
+                        {
+                            hitungscore = 640
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 110
+                    }
+                }
+                if angkaKontrak == "4"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 710
+                        }
+                        else
+                        {
+                            hitungscore = 510
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 920
+                        }
+                        else
+                        {
+                            hitungscore = 720
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 130
                     }
                 }
                 else if angkaKontrak == "5"
@@ -1600,30 +2089,30 @@ struct Close_IsiKontrak: View {
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 750 + ((Int(angkaKontrak)! - 5) * 200)
+                            hitungscore = 750
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1000 + ((Int(angkaKontrak)! - 5) * 400)
+                            hitungscore = 1000
                         }
                         else
                         {
-                            hitungscore = 600 + ((Int(angkaKontrak)! - 5) * 20)
+                            hitungscore = 600
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 550 + ((Int(angkaKontrak)! - 5) * 100)
+                            hitungscore = 550
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 800 + ((Int(angkaKontrak)! - 5) * 200)
+                            hitungscore = 800
                         }
                         else
                         {
-                            hitungscore = 400 + ((Int(angkaKontrak)! - 5) * 20)
+                            hitungscore = 400
                         }
                     }
                 }
@@ -1633,30 +2122,30 @@ struct Close_IsiKontrak: View {
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1540 + ((Int(angkaKontrak)! - 6) * 200)
+                            hitungscore = 1540
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1830 + ((Int(angkaKontrak)! - 6) * 400)
+                            hitungscore = 1830
                         }
                         else
                         {
-                            hitungscore = 1370 + ((Int(angkaKontrak)! - 6) * 20)
+                            hitungscore = 1370
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1090 + ((Int(angkaKontrak)! - 6) * 100)
+                            hitungscore = 1090
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1380 + ((Int(angkaKontrak)! - 6) * 200)
+                            hitungscore = 1380
                         }
                         else
                         {
-                            hitungscore = 920 + ((Int(angkaKontrak)! - 6) * 20)
+                            hitungscore = 920
                         }
                     }
                 }
@@ -1696,58 +2185,153 @@ struct Close_IsiKontrak: View {
             }
             else
             {
-                if angkaKontrak == "1" || angkaKontrak == "2"
+                if angkaKontrak == "1"
                 {
                     if isDoubleSelected == true
                     {
-                        hitungscore = 180 + ((Int(angkaKontrak)! - 1) * 100)
+                        hitungscore = 180
                     }
                     else if isRedoubleSelected == true
                     {
                         if isVulSelected == true
                         {
-                            hitungscore = 760 + ((Int(angkaKontrak)! - 1) * 200)
+                            hitungscore = 760
                         }
                         else
                         {
-                            hitungscore = 560 + ((Int(angkaKontrak)! - 1) * 200)
+                            hitungscore = 560
                         }
                     }
                     else
                     {
-                        hitungscore = 90 + ((Int(angkaKontrak)! - 1) * 30)
+                        hitungscore = 90
                     }
                 }
-                else if angkaKontrak == "4" || angkaKontrak == "5" || angkaKontrak == "3"
+                else if angkaKontrak == "2"
+                {
+                    if isDoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 690
+                        }
+                        else
+                        {
+                            hitungscore = 490
+                        }
+                    }
+                    else if isRedoubleSelected == true
+                    {
+                        if isVulSelected == true
+                        {
+                            hitungscore = 880
+                        }
+                        else
+                        {
+                            hitungscore = 680
+                        }
+                    }
+                    else
+                    {
+                        hitungscore = 120
+                    }
+                }
+                else if angkaKontrak == "3"
                 {
                     if isVulSelected == true
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 750 + ((Int(angkaKontrak)! - 3) * 200)
+                            hitungscore = 750
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1000 + ((Int(angkaKontrak)! - 3) * 400)
+                            hitungscore = 1000
                         }
                         else
                         {
-                            hitungscore = 600 + ((Int(angkaKontrak)! - 3) * 30)
+                            hitungscore = 600
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 550 + ((Int(angkaKontrak)! - 3) * 100)
+                            hitungscore = 550
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 800 + ((Int(angkaKontrak)! - 3) * 200)
+                            hitungscore = 800
                         }
                         else
                         {
-                            hitungscore = 400 + ((Int(angkaKontrak)! - 3) * 30)
+                            hitungscore = 400
+                        }
+                    }
+                }
+                else if angkaKontrak == "4"
+                {
+                    if isVulSelected == true
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 810
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 1120
+                        }
+                        else
+                        {
+                            hitungscore = 630
+                        }
+                    }
+                    else
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 610
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 920
+                        }
+                        else
+                        {
+                            hitungscore = 430
+                        }
+                    }
+                }
+                else if angkaKontrak == "5"
+                {
+                    if isVulSelected == true
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 870
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 1240
+                        }
+                        else
+                        {
+                            hitungscore = 660
+                        }
+                    }
+                    else
+                    {
+                        if isDoubleSelected == true
+                        {
+                            hitungscore = 670
+                        }
+                        else if isRedoubleSelected == true
+                        {
+                            hitungscore = 1040
+                        }
+                        else
+                        {
+                            hitungscore = 460
                         }
                     }
                 }
@@ -1757,30 +2341,30 @@ struct Close_IsiKontrak: View {
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1680 + ((Int(angkaKontrak)! - 6) * 200)
+                            hitungscore = 1680
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 2110 + ((Int(angkaKontrak)! - 6) * 400)
+                            hitungscore = 2110
                         }
                         else
                         {
-                            hitungscore = 1440 + ((Int(angkaKontrak)! - 6) * 30)
+                            hitungscore = 1440
                         }
                     }
                     else
                     {
                         if isDoubleSelected == true
                         {
-                            hitungscore = 1230 + ((Int(angkaKontrak)! - 6) * 100)
+                            hitungscore = 1230
                         }
                         else if isRedoubleSelected == true
                         {
-                            hitungscore = 1660 + ((Int(angkaKontrak)! - 6) * 200)
+                            hitungscore = 1660
                         }
                         else
                         {
-                            hitungscore = 990 + ((Int(angkaKontrak)! - 6) * 30)
+                            hitungscore = 990
                         }
                     }
                 }
