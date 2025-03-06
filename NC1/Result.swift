@@ -360,52 +360,52 @@ struct Result: View {
                         .frame(width: 381.99997, height: 1)
                         .background(.black)
                     
-                    HStack(spacing: 5){
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 1, height: 50)
-                            .background(.black)
-                            .position(x: 10, y: 25)
-                        
-                        Text("VP")
-                            .font(Font.custom("SF Pro Text", size: 13))
-                            .foregroundColor(.black)
-                            .frame(width: 100, alignment: .topLeading)
-                            .position(x: 30, y: 25)
-                        
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 1, height: 50)
-                            .background(.black)
-                            .position(x: -20, y: 25)
-                        
-                        Text("\(self.data[1][9])")
-                            .font(Font.custom("SF Pro Text", size: 13))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
-                            .frame(width: 75, alignment: .top)
-                            .position(x: 0, y: 25)
-                        
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 1, height: 50)
-                            .background(.black)
-                            .position(x: 13.5, y: 25)
-                        
-                        Text("\(self.data[1][8])")
-                            .font(Font.custom("SF Pro Text", size: 13))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
-                            .frame(width: 75, alignment: .top)
-                            .position(x: 30, y: 25)
-                        
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 1, height: 50)
-                            .background(.black)
-                            .position(x: 43, y: 25)
-                        
-                    }
+//                    HStack(spacing: 5){
+//                        Rectangle()
+//                            .foregroundColor(.clear)
+//                            .frame(width: 1, height: 50)
+//                            .background(.black)
+//                            .position(x: 10, y: 25)
+//                        
+//                        Text("VP")
+//                            .font(Font.custom("SF Pro Text", size: 13))
+//                            .foregroundColor(.black)
+//                            .frame(width: 100, alignment: .topLeading)
+//                            .position(x: 30, y: 25)
+//                        
+//                        Rectangle()
+//                            .foregroundColor(.clear)
+//                            .frame(width: 1, height: 50)
+//                            .background(.black)
+//                            .position(x: -20, y: 25)
+//                        
+//                        Text("\(self.data[1][8])")
+//                            .font(Font.custom("SF Pro Text", size: 13))
+//                            .multilineTextAlignment(.center)
+//                            .foregroundColor(.black)
+//                            .frame(width: 75, alignment: .top)
+//                            .position(x: 0, y: 25)
+//                        
+//                        Rectangle()
+//                            .foregroundColor(.clear)
+//                            .frame(width: 1, height: 50)
+//                            .background(.black)
+//                            .position(x: 13.5, y: 25)
+//                        
+//                        Text("\(self.data[1][9])")
+//                            .font(Font.custom("SF Pro Text", size: 13))
+//                            .multilineTextAlignment(.center)
+//                            .foregroundColor(.black)
+//                            .frame(width: 75, alignment: .top)
+//                            .position(x: 30, y: 25)
+//                        
+//                        Rectangle()
+//                            .foregroundColor(.clear)
+//                            .frame(width: 1, height: 50)
+//                            .background(.black)
+//                            .position(x: 43, y: 25)
+//                        
+//                    }
                     Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 381.99997, height: 1)
