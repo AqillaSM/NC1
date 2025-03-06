@@ -1313,7 +1313,7 @@ struct Close_IsiKontrak: View {
                             }
                         }
                     }
-                    if angkaKontrak == "2"{
+                    else if angkaKontrak == "2"{
                         if isVulSelected == true{
                             if isDoubleSelected == true
                             {
@@ -1343,7 +1343,7 @@ struct Close_IsiKontrak: View {
                             }
                         }
                     }
-                    if angkaKontrak == "3"{
+                    else if angkaKontrak == "3"{
                         if isVulSelected == true{
                             if isDoubleSelected == true
                             {
